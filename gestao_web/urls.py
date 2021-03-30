@@ -26,6 +26,7 @@ route.register(r'filmes',filmesviewset.FilmesViewSet, basename='Filmes')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('accounts/', include('accounts.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
     path('api/',include(route.urls)),
     path('', views.listar_filmes, name='listar_filmes'),
